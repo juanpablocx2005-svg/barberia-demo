@@ -1,0 +1,296 @@
+/* ========================================
+   VARIABLES Y RESET GLOBAL
+   ======================================== */
+
+:root {
+    --color-primary: #d4af37;
+    --color-dark: #111;
+    --color-dark-secondary: #1c1c1c;
+    --color-card: #222;
+    --color-text: white;
+    --color-text-light: #ccc;
+    --color-text-muted: #888;
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   BODY Y TIPOGRAFÍA
+   ======================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--color-dark);
+    color: var(--color-text);
+    text-align: center;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* ========================================
+   BOTONES
+   ======================================== */
+
+.boton,
+button {
+    background: var(--color-primary);
+    color: var(--color-dark);
+    padding: 14px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.boton:hover,
+button:hover {
+    background: #e5c158;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+header {
+    background: var(--color-dark-secondary);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    color: var(--color-primary);
+}
+
+.menu a.boton {
+    color: var(--color-dark);
+    padding: 10px 20px;
+}
+
+.hero {
+    padding: 120px 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 17, 17, 0.65);
+    z-index: 1;
+}
+
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--color-primary);
+}
+
+.hero p {
+    font-size: 20px;
+    color: var(--color-text);
+}
+
+header p {
+    margin-bottom: 30px;
+    color: var(--color-text-light);
+    font-size: 18px;
+}
+
+/* ========================================
+   SECCIONES
+   ======================================== */
+
+section {
+    padding: 60px 20px;
+    background: var(--color-dark);
+}
+
+section h2 {
+    color: var(--color-text);
+}
+
+/* ========================================
+   SERVICIOS (TARJETAS)
+   ======================================== */
+
+.servicios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    background: var(--color-card);
+    padding: 30px;
+    width: 220px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+    background: #2a2a2a;
+}
+
+.img-servicio {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: var(--color-text);
+}
+
+.tarjeta p {
+    margin-top: 15px;
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ========================================
+   SECCIÓN DE CONTACTO
+   ======================================== */
+
+#contacto {
+    background: var(--color-dark-secondary);
+}
+
+#contacto h2 {
+    color: var(--color-text);
+    margin-bottom: 25px;
+}
+
+#contacto p {
+    margin: 12px 0;
+    color: var(--color-text-light);
+    font-size: 16px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    padding: 20px;
+    background: var(--color-dark-secondary);
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-card);
+}
+
+.logo-footer {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tarjeta {
+    overflow: hidden;
+    padding: 0 0 25px 0;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta h3 {
+    margin-top: 20px;
+}
+
+.tarjeta p {
+    margin-bottom: 0;
+}
